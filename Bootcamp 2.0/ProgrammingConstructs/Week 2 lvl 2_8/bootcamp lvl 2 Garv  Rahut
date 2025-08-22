@@ -1,0 +1,311 @@
+RA2411003010718
+Garv Rahut
+J1 
+
+Week 1-
+Level :2
+
+
+ 1. Write a program to create a basic calculator that can perform
+addition, subtraction, multiplication, and division. The program should
+ask for two numbers (floating point) and perform all the operations
+    Hint =>
+    a.​ Create a variable number1 and number 2 and take user inputs.
+    b.​ Perform Arithmetic Operations of addition, subtraction, multiplication and division and
+         assign the result to a variable and finally print the result
+    I/P => number1, number2
+    O/P => The addition, subtraction, multiplication and division value of 2 numbers ___ and
+    ___ is ___, ____, ____, and ___
+    
+    
+    
+    
+    
+    
+import java.util.Scanner; // Import Scanner class to take user input
+public class BasicCalculator {
+  public static void main(String[] args) {
+      // Create a Scanner object for user input
+      Scanner scanner = new Scanner(System.in);
+      // Prompt the user to enter two numbers
+      System.out.print("Enter first number: ");
+      float number1 = scanner.nextFloat();
+      System.out.print("Enter second number: ");
+      float number2 = scanner.nextFloat();
+      // Perform arithmetic operations
+      float addition = number1 + number2;
+      float subtraction = number1 - number2;
+      float multiplication = number1 * number2;
+      float division = number2 != 0 ? number1 / number2 : Float.NaN; // Avoid division by
+zero
+      // Display the results
+      System.out.println("The addition, subtraction, multiplication and division value of 2
+numbers " +
+                    number1 + " and " + number2 + " is " + addition + ", " + subtraction + ", " +
+                    multiplication + " and " + (number2 != 0 ? division : "undefined") + ".");
+       // Close the scanner
+       scanner.close();
+   }
+}
+
+
+
+
+
+
+2. Write a program that takes the base and height to find area of a
+triangle in square inches and square centimeters
+     Hint => Area of a Triangle is 1⁄2 * base * height
+     I/P => base, height
+     O/P => Your Height in cm is ___ while in feet is ___ and inches is ___
+     
+     
+     
+import java.util.Scanner; // Import Scanner class to take user input
+public class TriangleAreaConverter {
+   public static void main(String[] args) {
+       // Create a Scanner object for user input
+       Scanner scanner = new Scanner(System.in);
+       // Prompt the user to enter base and height in inches
+       System.out.print("Enter the base of the triangle in inches: ");
+       float base = scanner.nextFloat();
+       System.out.print("Enter the height of the triangle in inches: ");
+       float height = scanner.nextFloat();
+       // Calculate the area of the triangle in square inches
+       float areaInInches = 0.5f * base * height;
+       // Convert base and height from inches to centimeters (1 inch = 2.54 cm)
+       float baseInCm = base * 2.54f;
+       float heightInCm = height * 2.54f;
+       float areaInCm = 0.5f * baseInCm * heightInCm;
+       // Convert height to feet and inches
+       float heightInFeet = height / 12;
+       // Display the results
+       System.out.println("The area of the triangle is " + areaInInches + " square inches and "
++ areaInCm + " square centimeters.");
+       System.out.println("Your height in cm is " + heightInCm + " while in feet is " +
+heightInFeet + " and inches is " + height + ".");
+       // Close the scanner
+       scanner.close();
+   }
+}
+
+
+
+
+
+
+3. Write a program to find the side of the square whose parameter you
+read from user
+    Hint => Perimeter of Square is 4 times side
+    I/P => perimeter
+    O/P => The length of the side is ___ whose perimeter is ____
+    
+    
+    
+    
+    
+    import java.util.Scanner; // Import Scanner class for user input
+    public class SquareSideFinder {
+       public static void main(String[] args) {
+         // Create a Scanner object to take user input
+         Scanner scanner = new Scanner(System.in);
+         // Prompt the user to enter the perimeter of the square
+         System.out.print("Enter the perimeter of the square: ");
+         float perimeter = scanner.nextFloat();
+         // Calculate the side of the square (side = perimeter / 4)
+         float side = perimeter / 4;
+         // Display the result
+         System.out.println("The length of the side is " + side + " whose perimeter is " +
+    perimeter + ".");
+         // Close the scanner
+         scanner.close();
+       }
+    }
+    
+    
+    
+    
+    
+    
+ 4. Write a program the find the distance in yards and miles for the
+distance provided by user in feets
+    Hint => 1 mile = 1760 yards and 1 yard is 3 feet
+    I/P => distanceInFeet
+    O/P => Your Height in cm is ___ while in feet is ___ and inches is ___
+    
+    
+    
+    
+   import java.util.Scanner; // Import Scanner class for user input
+    public class DistanceConverter {
+      public static void main(String[] args) {
+        // Create a Scanner object to take user input
+        Scanner scanner = new Scanner(System.in);
+        // Prompt the user to enter the distance in feet
+        System.out.print("Enter the distance in feet: ");
+        float distanceInFeet = scanner.nextFloat();
+        // Convert feet to yards and miles
+        float distanceInYards = distanceInFeet / 3;
+        float distanceInMiles = distanceInYards / 1760;
+        // Display the result
+        System.out.println("The distance in yards is " + distanceInYards + " and in miles is "
+   + distanceInMiles + ".");
+        // Close the scanner
+        scanner.close();
+      }
+   }
+   
+   
+   
+   
+   
+   
+5. Write a program to input the unit price of an item and the quantity to
+be bought. Then, calculate the total price.
+   Hint => NA
+   I/P => unitPrice, quantity
+   O/P => The total purchase price is INR ___ if the quantity ___ and unit price is INR
+   
+   
+   
+   
+   
+   
+   import java.util.Scanner; // Import Scanner class for user input
+   public class TotalPriceCalculator {
+      public static void main(String[] args) {
+        // Create a Scanner object to take user input
+      Scanner scanner = new Scanner(System.in);
+      // Prompt the user to enter the unit price
+      System.out.print("Enter the unit price of the item in INR: ");
+      float unitPrice = scanner.nextFloat();
+      // Prompt the user to enter the quantity
+      System.out.print("Enter the quantity to be bought: ");
+      int quantity = scanner.nextInt();
+      // Calculate the total price
+      float totalPrice = unitPrice * quantity;
+      // Display the result
+      System.out.println("The total purchase price is INR " + totalPrice + " if the quantity is
+" + quantity + " and the unit price is INR " + unitPrice + ".");
+      // Close the scanner
+      scanner.close();
+   }
+   
+   
+   
+   
+   
+     6. Write a program to take 2 numbers and print their quotient and
+     reminder
+Hint => Use division operator (/) for quotient and moduli operator (%) for reminder
+I/P => number1, number2
+O/P => The Quotient is ___ and Reminder is ___ of two number ___ and ___
+
+
+
+
+
+
+import java.util.Scanner; // Import Scanner class for user input
+public class QuotientRemainder {
+   public static void main(String[] args) {
+      // Create a Scanner object to take user input
+      Scanner scanner = new Scanner(System.in);
+      // Prompt the user to enter two numbers
+         System.out.print("Enter the first number: ");
+         int number1 = scanner.nextInt();
+         System.out.print("Enter the second number: ");
+         int number2 = scanner.nextInt();
+         // Calculate quotient and remainder
+         int quotient = number1 / number2;
+         int remainder = number1 % number2;
+         // Display the result
+         System.out.println("The Quotient is " + quotient + " and Remainder is " + remainder
+   + " of two numbers " + number1 + " and " + number2 + ".");
+         // Close the scanner
+         scanner.close();
+      }
+      
+      
+      
+      
+      
+      
+7. Write an IntOperation program by taking a, b, and c as input values and
+print the following integer operations a + b *c, a * b + c, c + a / b, and a % b + c.
+Please also understand the precedence of the operators.
+   Hint =>
+   a.​ Create variables a, b, c of int data type.
+   b.​ Take user input for a, b, and c.
+   c.​ Compute 3 integer operations and assign the result to a variable
+   d.​ Finally, print the result and try to understand operator precedence.
+   I/P => fee, discountPrecent
+   O/P => The results of Int Operations are —-, -—, and —-
+   
+   
+   
+   
+   
+   
+   import java.util.Scanner; // Import Scanner class for user input
+   public class IntOperation {
+      public static void main(String[] args) {
+         // Create a Scanner object to take user input
+         Scanner scanner = new Scanner(System.in);
+         // Prompt the user to enter three integers
+         System.out.print("Enter the first number (a): ");
+      int a = scanner.nextInt();
+      System.out.print("Enter the second number (b): ");
+      int b = scanner.nextInt();
+      System.out.print("Enter the third number (c): ");
+      int c = scanner.nextInt();
+      // Perform integer operations considering operator precedence
+      int result1 = a + b * c; // Multiplication has higher precedence than addition
+      int result2 = a * b + c; // Multiplication first, then addition
+      int result3 = c + a / b; // Division first, then addition
+      int result4 = a % b + c; // Modulus first, then addition
+      // Display the results
+      System.out.println("The results of Int Operations are " + result1 + ", " + result2 + ", "
++ result3 + " and " + result4 + ".");
+      // Close the scanner
+      scanner.close();
+   }
+}
+
+
+
+
+
+     8. Similarly, write the DoubleOpt program by taking double values
+     and doing the same operations.
+     
+     
+     
+     
+     
+     
+     
+import java.util.Scanner; // Import Scanner class for user input
+public class DoubleOpt {
+   public static void main(String[] args) {
+      // Create a Scanner object to take user input
+      Scanner scanner = new Scanner(System.in);
+      // Prompt the user to enter three double values
+      System.out.print("Enter the first number (a): ");
+      double a = scanner.nextDouble();
+      System.out.print("Enter the second number (b): ");
+      double b = scanner.nextDouble();
+      System.out.print("Enter the third number (c): ");
+      double c = scanner.nextDouble();
+      // Perform double precision operations considering operator precedence
+      double result1 = a + b * c; // Multiplication has higher precedence than addition
+      double result2 = a * b + c; // Multiplication first, then addition
+      double result3 = c + a / b; // Division first, then addition
+      double result4 = a % b + c; // Modulus first, then addition
+      // Display the results
+      System.out.println("The results of Double Operations are " + result1 + ", " + result2
++ ", " + result3 + " and " + result4 + ".");
+      // Close the scanner
+      scanner.close();
+   }
+}
