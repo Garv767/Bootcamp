@@ -12,7 +12,7 @@ class Q1{
         System.out.print("Enter First Number: ");
         float number1 = calculate.nextFloat();
         //Enter second input
-        System.out.println("Enter Second Number: ");
+        System.out.println("Enter Second Number: ");ṇ
         float number2 = calculate.nextFloat();
 
         add = number1 + number2;
